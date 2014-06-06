@@ -11,13 +11,14 @@ gem 'forem-theme-base', :github => 'radar/forem-theme-base'
 gem 'forem-theme-twist', :github => 'radar/forem-theme-twist'
 gem 'forem-bootstrap', :github => "radar/forem-bootstrap"
 gem 'forem-textile_formatter'
+gem 'bcrypt-ruby','~> 3.1.5'
 
 # Heroku Add-Ons
 gem 'unicorn'
 gem 'newrelic_rpm'
 gem 'dalli'
 
-gem 'rails', '4.0.2'
+gem 'rails', '4.0.3'
 gem 'devise'
 gem 'faker', '1.1.2'
 
