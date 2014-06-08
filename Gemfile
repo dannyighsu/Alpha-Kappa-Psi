@@ -11,7 +11,6 @@ gem 'forem-theme-base', :github => 'radar/forem-theme-base'
 gem 'forem-theme-twist', :github => 'radar/forem-theme-twist'
 gem 'forem-bootstrap', :github => "radar/forem-bootstrap"
 gem 'forem-textile_formatter'
-gem 'bcrypt-ruby','~> 3.1.5'
 
 # Heroku Add-Ons
 gem 'unicorn'
