@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: 6e226154625485fea9a9ad915f082a8a0dc45400
+  revision: 4f445b51c22b12af2cdde57fe2ce9835c32ef88e
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
@@ -110,6 +110,8 @@ GEM
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
     bcrypt (3.1.7)
+    bcrypt-ruby (3.1.5)
+      bcrypt (>= 3.1.3)
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
     bourbon (4.0.2)
@@ -323,6 +325,7 @@ DEPENDENCIES
   activeadmin!
   activesupport (~> 4.0.2)
   aws-sdk (~> 1.5.7)
+  bcrypt-ruby (~> 3.1.2)
   cancan!
   capybara (= 2.1.0)
   coffee-rails (= 4.0.1)

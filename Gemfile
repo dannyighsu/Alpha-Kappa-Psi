@@ -20,6 +20,7 @@ gem 'dalli'
 gem 'rails', '4.0.3'
 gem 'devise'
 gem 'faker', '1.1.2'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk', '~> 1.5.7'
