@@ -2,7 +2,7 @@ class ActivesController < ApplicationController
 
 	skip_before_filter :verify_authenticity_token
 
-	# Devise is combined with a RESTful user resource, so only some of the 
+	# Devise is combined with a RESTful user resource, so only some of the
 	# RESTful routes need to be implemented here
 
 	def show
@@ -19,4 +19,7 @@ class ActivesController < ApplicationController
     #end
   end
 
+  def eboard
+    @actives = Active.all.sort_by{ |a| a.name.downcase }
+  end
 end

@@ -11,7 +11,6 @@ gem 'forem-theme-base', :github => 'radar/forem-theme-base'
 gem 'forem-theme-twist', :github => 'radar/forem-theme-twist'
 gem 'forem-bootstrap', :github => "radar/forem-bootstrap"
 gem 'forem-textile_formatter'
-gem 'bcrypt-ruby','~> 3.1.5'
 
 # Heroku Add-Ons
 gem 'unicorn'
@@ -21,6 +20,7 @@ gem 'dalli'
 gem 'rails', '4.0.3'
 gem 'devise'
 gem 'faker', '1.1.2'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk', '~> 1.5.7'
