@@ -1,3 +1,16 @@
+//Background
+html {
+    background: url(image_path('background.png')) no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    background-color: transparent;
+    background: transparent;
+}
 
 
 /***** Active sign in, sign up, edit profile forms *****/
@@ -8,7 +21,7 @@
     padding: 15px;
     margin: 0 auto;
     padding-top: 5px;
-    text-align: center; 
+    text-align: center;
 }
 
 .form-sign-in-up .form-control
@@ -30,7 +43,7 @@
     padding: 15px;
     margin: 0 auto;
     padding-top: 5px;
-    text-align: center; 
+    text-align: center;
 }
 
 .form-edit-active .form-control
@@ -117,7 +130,7 @@
 /* Styles for all static pages */
 
 .account-wall-static {
-    
+
     padding: 20px 40px 40px 40px;
     background-color: #fff;
     -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
@@ -151,7 +164,7 @@
 }
 
 #intro h1 {
-    
+
     font-size:3.3em;
     font-weight:505;
     font-family:"Open Sans",sans-serif;
@@ -162,7 +175,7 @@
 
 }
 #intro h3 {
-    
+
     margin:-10px 0 0 0;
     font-size:1.5em;
     font-weight:400;
@@ -174,8 +187,8 @@
 }
 
 #motto-bg h3 {
-    font-family: 'Italianno', cursive; 
-    text-transform:none; 
+    font-family: 'Italianno', cursive;
+    text-transform:none;
     font-size: 22px;
     color: #A8A8A8;
 }
@@ -191,18 +204,18 @@
 /* Text styling for static pages */
 
 .about-header {
-    font-weight:500; 
-    font-size: 26px; 
-    line-height: 25px; 
-    margin-left: 80px; 
+    font-weight:500;
+    font-size: 26px;
+    line-height: 25px;
+    margin-left: 80px;
     margin-right: 80px;
     text-align: left;
 }
 
 .about-body {
     font-size:13px;
-    margin-left: 80px; 
-    margin-right: 80px; 
+    margin-left: 80px;
+    margin-right: 80px;
     line-height: 24px;
     text-align: left;
 }
@@ -264,7 +277,7 @@
 }
 
 .active-names {
-    text-align:center; 
+    text-align:center;
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     font-size: 12px;
@@ -300,16 +313,16 @@
     top:15px;
 }
 
-.thumbnail img { 
-    display: block; 
-    width: inherit; 
+.thumbnail img {
+    display: block;
+    width: inherit;
 }
 
 .thumbnail a:hover{
-    -webkit-transform: rotate(0deg); 
+    -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
         transform: rotate(0deg);
-    -webkit-transform: scale(1.2); 
+    -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
         transform: scale(1.2);
     z-index:10;
@@ -395,17 +408,17 @@
 /* Small info box used on top of rush page and forums and other places */
 
 .small-infobox {
-    width:25%; 
-    height:auto; 
-    margin-left:auto; 
-    margin-right:auto; 
-    text-align:center; 
+    width:25%;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
     background-color:#fff;
-    font-family: 'Lato', sans-serif; 
-    letter-spacing: 0.1em; 
-    padding-top:10px; 
-    padding-bottom:10px; 
-    font-size:13px; 
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.1em;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size:13px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 

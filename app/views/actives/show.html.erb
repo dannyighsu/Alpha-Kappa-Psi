@@ -23,6 +23,7 @@
 </style>
 
 
+
 <!-- Content -->
 
 <% provide(:title, @active.name) %>
@@ -34,7 +35,7 @@
 <!-- If active is signed in, then we want to render the active resources column -->
 
 <% if active_signed_in? && current_active?(@active) %>
-  
+
         <div class="account-wall-static">
 
           <div class="row">
