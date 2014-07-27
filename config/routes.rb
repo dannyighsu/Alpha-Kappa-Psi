@@ -6,10 +6,10 @@ AlphaKappaPsi::Application.routes.draw do
   #
   # We ask that you don't use the :as option here, as Forem relies on it being the default of "forem"
   mount Forem::Engine, :at => '/forums'
-  
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  
+
   devise_for :actives, :path_prefix => 'alt'
   resources :actives, only: [:index, :show] do
     resources :career_entries
@@ -35,6 +35,7 @@ AlphaKappaPsi::Application.routes.draw do
   match    '/awards',           to: 'static_pages#awards',            via: 'get'
   match    '/rushee_mailer',    to: 'static_pages#rushee_mailer',     via: 'get'
   match    '/rushee_mailer',    to: 'static_pages#email_rushee',      via: 'post'
+  match    '/eboard',           to: 'actives#eboard',                 via: 'get'
 
   # Handles GET /rush_application -- controller: rush_application | method: INDEX
   # Handles GET /rush_application/:id -- controller: rush_application | method: SHOW
