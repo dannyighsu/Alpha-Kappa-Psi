@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: a8ae008ec9632110bf33443ce7090dfef9cca480
+  revision: 5953cffdc14b7ccb497ba179eb59d33518dcbbe7
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
@@ -36,14 +36,8 @@ GIT
     forem-theme-base (0.0.1)
 
 GIT
-  remote: git://github.com/radar/forem-theme-twist.git
-  revision: f08ab243ee695bd5485d589c1177d99d00602150
-  specs:
-    forem-theme-twist (0.0.1)
-
-GIT
   remote: git://github.com/radar/forem.git
-  revision: cc6e884c64a0be5aa64647235ff604b42a04a51f
+  revision: b752c8ef3ac8d5a3129da92442ef3a1fd3541941
   branch: rails4
   specs:
     forem (1.0.0.beta1)
@@ -51,7 +45,7 @@ GIT
       decorators (~> 1.0.2)
       friendly_id (~> 5.0.0)
       gemoji (= 1.1.2)
-      rails (>= 4.0.3, <= 4.1.2)
+      rails (>= 4.0.3, <= 4.1.4)
       sanitize (= 2.0.6)
       select2-rails (~> 3.5.4)
       simple_form (~> 3.0.1)
@@ -112,7 +106,7 @@ GEM
     bcrypt (3.1.7)
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
-    bootstrap-sass (3.2.0.0)
+    bootstrap-sass (3.2.0.1)
       sass (~> 3.2)
     bourbon (4.0.2)
       sass (~> 3.3)
@@ -258,7 +252,7 @@ GEM
     rubyzip (0.9.9)
     sanitize (2.0.6)
       nokogiri (>= 1.4.4)
-    sass (3.3.10)
+    sass (3.3.12)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
@@ -337,7 +331,6 @@ DEPENDENCIES
   forem-bootstrap!
   forem-textile_formatter
   forem-theme-base!
-  forem-theme-twist!
   friendly_id!
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
