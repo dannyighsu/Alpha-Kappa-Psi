@@ -1,3 +1,7 @@
+.demo-2 {
+	margin-top: -15px;
+}
+
 .demo-2 .sl-slider-wrapper {
 	width: 100%;
 	height: 600px;
@@ -161,10 +165,10 @@
 	background-image: url('grouppic2.jpg');
 }
 .demo-2 .bg-img-2 {
-	background-image: url('ae.jpg');
+	background-image: url('bcs2.jpg');
 }
 .demo-2 .bg-img-3 {
-	background-image: url('cancun.jpg');
+	background-image: url('ae.jpg');
 }
 
 /* Animations for content elements */
