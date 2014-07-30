@@ -17,7 +17,7 @@ ActiveAdmin.register Active do
     column :forem_admin
 
     # Adds view/edit/delete actions
-    default_actions
+    actions
   end
 
   # Specify which attributes we want the admin to be able to edit
@@ -44,7 +44,7 @@ ActiveAdmin.register Active do
     f.inputs "Administration permissions" do
       f.input :forem_admin
     end
-  
+
     f.actions
   end
 

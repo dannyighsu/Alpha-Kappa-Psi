@@ -6,6 +6,7 @@
   .navbar-inner li a {
     line-height: 40px;
     font-family: 'Lato', sans-serif;
+    cursor: default;
   }
 
   @media (max-width:979px) {
@@ -126,9 +127,11 @@
   .dropdown-menu {
     text-shadow: none;
   }
+
+  .navbar .nav > li:hover {
+    background: rgba(200, 200, 200, 0.9);
+  }
 </style>
-
-
 
 <!-- Content -->
 <% cache cache_key_for_header do %>
