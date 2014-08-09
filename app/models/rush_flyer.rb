@@ -8,6 +8,6 @@ class RushFlyer < ActiveRecord::Base
     :path => '/:class/:attachment/:id_partition/:style/:filename',
     :s3_credentials => S3_CREDENTIALS
 
-  do_not_validate_attachment_file_type :image
+  do_not_validate_attachment_file_type :front
 
 end
