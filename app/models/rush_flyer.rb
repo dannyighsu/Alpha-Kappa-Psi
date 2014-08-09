@@ -8,7 +8,6 @@ class RushFlyer < ActiveRecord::Base
     :path => '/:class/:attachment/:id_partition/:style/:filename',
     :s3_credentials => S3_CREDENTIALS
 
-  validates_attachment_content_type :image,
-    :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  do_not_validate_attachment_file_type :image
 
 end
