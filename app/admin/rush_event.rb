@@ -1,5 +1,5 @@
 ActiveAdmin.register RushEvent do
-  
+
   index do
     selectable_column
     column :event_name
@@ -9,7 +9,7 @@ ActiveAdmin.register RushEvent do
     column :semester
 
     # Adds view/edit/delete actions
-    default_actions
+    actions
   end
 
 
@@ -21,7 +21,7 @@ ActiveAdmin.register RushEvent do
       f.input :event_time, :label => "Event starting time"
       f.input :semester, :label => "Rush semester (must be in the format [Semester] [Year]; i.e. Spring 2014)"
     end
-  
+
     f.actions
   end
 
@@ -32,5 +32,5 @@ ActiveAdmin.register RushEvent do
       params.permit!
     end
   end
-  
+
 end
