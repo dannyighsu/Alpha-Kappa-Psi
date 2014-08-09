@@ -10,7 +10,7 @@ ActiveAdmin.register Rushee do
     column :eliminated
 
     # Adds view/edit/delete actions
-    default_actions
+    actions
   end
 
   form do |f|
@@ -22,7 +22,7 @@ ActiveAdmin.register Rushee do
       f.input :photograph
       f.input :eliminated
     end
-  
+
     f.actions
   end
 
@@ -50,5 +50,5 @@ ActiveAdmin.register Rushee do
     end
     redirect_to :back
   end
-  
+
 end

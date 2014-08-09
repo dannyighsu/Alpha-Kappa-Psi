@@ -1,6 +1,6 @@
 ActiveAdmin.register Award do
 
-  
+
   index do
     selectable_column
     column :year
@@ -8,7 +8,7 @@ ActiveAdmin.register Award do
     column :desc
 
     # Adds view/edit/delete actions
-    default_actions
+    actions
   end
 
   # Permit all attributes of Rushees to be edited
@@ -17,5 +17,5 @@ ActiveAdmin.register Award do
       params.permit!
     end
   end
-  
+
 end

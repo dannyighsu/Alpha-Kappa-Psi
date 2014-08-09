@@ -12,7 +12,7 @@ ActiveAdmin.register CareerEntry do
     column "Full-time/internship", :fullintern
 
     # Adds view/edit/delete actions
-    default_actions
+    actions
   end
 
 
@@ -28,11 +28,11 @@ ActiveAdmin.register CareerEntry do
       f.input :year
       f.input :fullintern, as: :select, collection: ["Internship", "Full-time"], :label => "Full-time/internship"
     end
-  
+
     f.actions
   end
 
-  
+
   # Permit all attributes of Rushees to be edited
   controller do
     def permitted_params
