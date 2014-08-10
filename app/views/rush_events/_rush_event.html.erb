@@ -36,10 +36,10 @@ rush_event.event_time.strftime("%p") retrieves AM or PM
 	<h1 style="font-weight:400; font-size: 14px; line-height: 10px; color: rgba(149,188,184,0.85);">
 		<%= rush_event.event_time.strftime("%l") %>:<%= rush_event.event_time.strftime("%M") %>
 		<% if rush_event.event_time.strftime("%p") == "12:00AM" %>
-			<%= <%= rush_event.location %>
+			<%= rush_event.location %>
 		<% else %>
 			<%= rush_event.event_time.strftime("%p") %> @ <%= rush_event.location %>
-		<% end %>
+		<% end %>i
 	</h1>
 
 	<br />
