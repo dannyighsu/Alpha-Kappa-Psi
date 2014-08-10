@@ -17,12 +17,12 @@
 
   In addition, you'll receive updates and reminders about our rush events. Below is a quick breakdown of all planned events and their times:    <br/>
 
-  <% for index in 0 ... @rush_events.size %>
+  <% for event in @rush_events.order("created_at") %>
     <br/>
-      <b><%= @rush_events[index].event_name %></b> <br/>
-      <i>Description: </i><%= @rush_events[index].event_description   %> <br/>
-      <i>Time: </i><%= @rush_events[index].event_time.strftime("%A, %B %d, %Y") %> <br/>
-      <i>Location: </i><%= @rush_events[index].location  %> <br/>
+      <b><%= event.event_name %></b> <br/>
+      <i>Description: </i><%= event.event_description   %> <br/>
+      <i>Time: </i><%= event.event_time.strftime("%A, %B %d, %Y") %> <br/>
+      <i>Location: </i><%= event.location  %> <br/>
   <% end %>
 
   <br/>
