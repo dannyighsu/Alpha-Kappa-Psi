@@ -27,20 +27,18 @@
 
   <%= render 'shared/error_messages', object: f.object %>
 
-  <div class="account-wall">  
+  <div class="account-wall">
     <img class="profile-img" src=<%= asset_path("akpsi_color_200.png")%> alt="akpsi_color_200">
 
     <p class="profile-name">AKΨ: Alpha Beta Chapter</p>
     <span class="profile-email">Rushee Sign-up</span><br /><br />
 
 
-    Please check back at the beginning <br />of the Fall 2014 semester.
+    <!--Please check back at the beginning <br />of the Fall 2014 semester.-->
 
     <!-- Rushee signup form - uncomment this when you want rushees to be able to sign up -->
 
-
-
-    <!--<%= f.text_field :name, class: 'form-control', autofocus: true, placeholder: "&#xf007;  Name".html_safe %>
+    <%= f.text_field :name, class: 'form-control', autofocus: true, placeholder: "&#xf007;  Name".html_safe %>
     <%= f.text_field :email, class: 'form-control', autofocus: true, placeholder: "&#xf003;  Email".html_safe %>
     <%= f.text_field :major, class: 'form-control', autofocus: true, placeholder: "&#xf15c;  Major".html_safe %>
     <%= f.password_field :password, class: 'form-control', autofocus: true, placeholder: "&#xf084;  Password".html_safe %>
@@ -51,7 +49,7 @@
     <br />
     <br />
     <%= f.submit "Submit rush sign-up", class: "btn btn-sm" %><br />
-    <br /><p style="font-size:11px;">(Please only click ONCE)</p>-->
+    <br /><p style="font-size:11px;">(Please only click ONCE)</p>
 
 
 
@@ -60,4 +58,3 @@
 
   </div>
 <% end %>
-
