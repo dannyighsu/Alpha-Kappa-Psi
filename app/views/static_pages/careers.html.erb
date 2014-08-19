@@ -19,11 +19,11 @@
 
 	.table {
 		font-size: 11px;
-	}
+	}`
 
 
 	@media (max-width: 767px) {
-	  
+
 	  .account-wall-static {
 	  	padding-right: 20px;
 	  	padding-left: 20px;
@@ -38,7 +38,7 @@
 
 <% provide(:title, 'Careers') %>
 
-<div class="account-wall-static">  
+<div class="account-wall-static">
 
   <div id="intro">
 
@@ -73,7 +73,7 @@
 							</tr>
 						</thead>
 
-						<tr style="background-color:#eee">
+						<tr style="background-color:#ddd">
 							<td> <b><%= @careerentries[index].job_category %></b> </td>
 							<td> </td>
 							<td> </td>
@@ -105,7 +105,7 @@
 							</tr>
 						</thead>
 
-						<tr style="background-color:#eee">
+						<tr style="background-color:#ddd">
 							<td> <b> <%= @careerentries[index].job_category %> </b> </td>
 							<td> </td>
 							<td> </td>
@@ -130,7 +130,7 @@
 
 
 
-		<!-- If we're both (1) on the last entry; (2) the last entry is a new year 
+		<!-- If we're both (1) on the last entry; (2) the last entry is a new year
 	    then make a new table and render just that row -->
 		<% elsif (index == (@careerentries.size - 1)) && (@careerentries[index].year != @careerentries[index - 1].year) %>
 
@@ -142,7 +142,7 @@
 			<!-- Need to check whether the entry for this new year is a full-time entry or an internship entry -->
 			<h3>
 				<% if @careerentries[index].fullintern == "Full-time" %>
-					<%= @careerentries[index].year %> Full-time 
+					<%= @careerentries[index].year %> Full-time
 				<% else %>
 					<%= @careerentries[index].year %> Internships
 				<% end %>
@@ -162,7 +162,7 @@
 						</tr>
 					</thead>
 
-					<tr style="background-color:#eee">
+					<tr style="background-color:#ddd">
 						<td> <b> <%= @careerentries[index].job_category %> </b> </td>
 						<td> </td>
 						<td> </td>
@@ -192,7 +192,7 @@
 			<br />
 			<h3>
 				<% if @careerentries[index].fullintern == "Full-time" %>
-					<%= @careerentries[index].year %> Full-time 
+					<%= @careerentries[index].year %> Full-time
 				<% else %>
 					<%= @careerentries[index].year %> Internships
 				<% end %>
@@ -211,7 +211,7 @@
 						</tr>
 					</thead>
 
-					<tr style="background-color:#eee">
+					<tr style="background-color:#ddd">
 						<td> <b> <%= @careerentries[index].job_category %> </b> </td>
 						<td> </td>
 						<td> </td>
@@ -253,7 +253,7 @@
 							</tr>
 						</thead>
 
-						<tr style="background-color:#eee">
+						<tr style="background-color:#ddd">
 							<td> <b> <%= @careerentries[index].job_category %> </b> </td>
 							<td> </td>
 							<td> </td>
@@ -274,7 +274,7 @@
 
 					<!-- If we need to start a new job category on this last entry -->
 					<% if @careerentries[index].job_category != @careerentries[index - 1].job_category %>
-						<tr style="background-color:#eee">
+						<tr style="background-color:#ddd">
 							<td> <b> <%= @careerentries[index].job_category %> </b> </td>
 							<td> </td>
 							<td> </td>
@@ -324,7 +324,7 @@
 							</tr>
 						</thead>
 
-						<tr style="background-color:#eee">
+						<tr style="background-color:#ddd">
 							<td> <b> <%= @careerentries[index].job_category %> </b> </td>
 							<td> </td>
 							<td> </td>
@@ -342,7 +342,7 @@
 			<% else %>
 
 				<% if @careerentries[index].job_category != @careerentries[index - 1].job_category %>
-					<tr style="background-color:#eee">
+					<tr style="background-color:#ddd">
 						<td> <b> <%= @careerentries[index].job_category %> </b> </td>
 						<td> </td>
 						<td> </td>
