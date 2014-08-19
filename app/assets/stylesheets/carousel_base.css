@@ -163,6 +163,9 @@
 
 .demo-2 .bg-img-1 {
 	background-image: url('Rush_Flyer_F2014.jpg');
+	padding: 0px;
+	margin-left: 200px;
+	margin-top: 200px;
 }
 .demo-2 .bg-img-2 {
 	background-image: url('banquet.jpg');
