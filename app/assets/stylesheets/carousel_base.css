@@ -168,10 +168,22 @@
 	margin-top: 200px;
 }
 .demo-2 .bg-img-2 {
-	background-image: url('banquet.jpg');
+	background-image: url('sunset.jpg');
+	padding: 0px;
+	margin-left: 200px;
+	margin-top: 200px;
 }
 .demo-2 .bg-img-3 {
-	background-image: url('sunset.jpg');
+	background-image: url('bcs2.jpg');
+	padding: 0px;
+	margin-left: 200px;
+	margin-top: 200px;
+}
+.demo-2 .bg-img-4 {
+	background-image: url('banquet.jpg');
+	padding: 0px;
+	margin-left: 200px;
+	margin-top: 200px;
 }
 
 /* Animations for content elements */
