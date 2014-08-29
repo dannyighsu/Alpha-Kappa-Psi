@@ -16,7 +16,7 @@
 	  list-style: none;
 	  text-align: left;
 	}
-	 
+
 	.modal-list li:before {
 	  content: '»  ';
 	  font-size: 1.2em;
@@ -92,41 +92,40 @@
 				<ul class="modal-list">
 
 					<% unless active.major.blank? %>
-						<li><strong>MAJOR:</strong> 
+						<li><strong>MAJOR:</strong>
 							<%= active.major %>
 						</li>
 					<% end %>
 
 					<% unless active.pledge_class.blank? %>
-						<li><strong>PLEDGE CLASS:</strong> 
+						<li><strong>PLEDGE CLASS:</strong>
 							<%= active.pledge_class %>
 						</li>
 					<% end %>
 
 					<% unless active.positions_held.blank? %>
-						<li><strong>POSITIONS HELD:</strong> 
+						<li><strong>POSITIONS HELD:</strong>
 							<%= active.positions_held %>
 						</li>
 					<% end %>
 
 					<% unless active.hometown.blank? %>
-						<li><strong>HOMETOWN:</strong> 
+						<li><strong>HOMETOWN:</strong>
 							<%= active.hometown %>
 						</li>
 					<% end %>
 
 					<% unless active.biography.blank? %>
-						<li><strong>BIOGRAPHY:</strong> 
+						<li><strong>BIOGRAPHY:</strong>
 							<%= active.biography %>
 						</li>
 					<% end %>
 
 					<% unless active.linkedin.blank? %>
 						<li><strong>CONNECT WITH <%= active.name.split.first.upcase %> ON LINKEDIN: &nbsp;&nbsp;</strong>
-							<a href= <%= active.linkedin %> target="_blank"> <i class="fa fa-linkedin-square" style="font-size: 30px;"></i> </a> 
+							<a href= <%= active.linkedin %> target="_blank"> <i class="fa fa-linkedin-square" style="font-size: 30px;"></i> </a>
 						</li>
 					<% end %>
-
 
 				</ul>
 				<button class="md-close">Close</button>
@@ -134,14 +133,11 @@
 		</div>
 	</div>
 
-		
+
     <button class="md-trigger" data-modal=<%= "modal-" + active.id.to_s %> >
 		<a class="thumbnail" title=<%= active.name %> >
 		  <%= image_tag active.photograph.url(:middlesmall) %>
 		  <p class="active-names"><%= active.name.split[0] %> <br /> <%= active.name.split[1..-1].join(' ') %></p>
-		  <% unless active.eboard.empty? %>
-		  	<p style="font-family: 'Lato', sans-serif; letter-spacing:0.1em;"><%= active.eboard %></p>
-		  <% end %>
 
 		</a>
 	</button>
@@ -149,5 +145,3 @@
 
 	<div class="md-overlay"></div><!-- the overlay element -->
 </li>
-
-

@@ -1,0 +1,150 @@
+<!-- Styles for modals -->
+
+<style>
+
+    a {
+        color: #bed9d9;
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:active {
+        color: #333;
+    }
+
+    .modal-list {
+      list-style: none;
+      text-align: left;
+    }
+
+    .modal-list li:before {
+      content: '»  ';
+      font-size: 1.2em;
+    }
+
+
+
+    /* Styles for modal 'close' button */
+    .md-close {
+        border: none;
+        padding: 0.6em 1.2em;
+
+        /* Background color of "close" button */
+        background: rgba(210,212,215,0.8);
+
+        /* Text color of "close" button */
+        color: #565b60;
+
+        font-family: 'Lato', Calibri, Arial, sans-serif;
+        font-size: 1em;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: inline-block;
+        margin: 3px 2px;
+        border-radius: 2px;
+    }
+
+    .md-close:hover {
+        background: #bec0c2;
+    }
+
+    /* Styles for outer active button (that activates modal) */
+    .md-trigger {
+
+        /* Outer border */
+        border: 0px #c0c0c0 solid;
+        background: none;
+        outline: 0;
+    }
+
+    .md-image {
+        float:left;
+        padding-right: 40px;
+        padding-bottom: 25px;
+    }
+
+
+    @media (max-width: 767px) {
+
+        .md-image {
+            float: none;
+            padding-right: 0;
+        }
+    }
+
+
+</style>
+
+
+
+
+<!-- Content -->
+
+<li>
+    <!-- Need to customize ID names for modals to keep each active's modal unique -->
+    <div class="md-modal md-effect-1" id=<%= "modal-" + active.id.to_s %> >
+        <div class="md-content">
+            <h3><%= active.name %></h3>
+            <div style="text-align:center;">
+                <div class="md-image"><%= image_tag active.photograph.url(:medium) %></div>
+
+                <ul class="modal-list">
+
+                    <% unless active.major.blank? %>
+                        <li><strong>MAJOR:</strong>
+                            <%= active.major %>
+                        </li>
+                    <% end %>
+
+                    <% unless active.pledge_class.blank? %>
+                        <li><strong>PLEDGE CLASS:</strong>
+                            <%= active.pledge_class %>
+                        </li>
+                    <% end %>
+
+                    <% unless active.positions_held.blank? %>
+                        <li><strong>POSITIONS HELD:</strong>
+                            <%= active.positions_held %>
+                        </li>
+                    <% end %>
+
+                    <% unless active.hometown.blank? %>
+                        <li><strong>HOMETOWN:</strong>
+                            <%= active.hometown %>
+                        </li>
+                    <% end %>
+
+                    <% unless active.biography.blank? %>
+                        <li><strong>BIOGRAPHY:</strong>
+                            <%= active.biography %>
+                        </li>
+                    <% end %>
+
+                    <% unless active.linkedin.blank? %>
+                        <li><strong>CONNECT WITH <%= active.name.split.first.upcase %> ON LINKEDIN: &nbsp;&nbsp;</strong>
+                            <a href= <%= active.linkedin %> target="_blank"> <i class="fa fa-linkedin-square" style="font-size: 30px;"></i> </a>
+                        </li>
+                    <% end %>
+
+                </ul>
+                <button class="md-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+    <button class="md-trigger" data-modal=<%= "modal-" + active.id.to_s %> >
+        <a class="thumbnail" title=<%= active.name %> >
+          <%= image_tag active.photograph.url(:middlesmall) %>
+          <p class="active-names"><%= active.name.split[0] %> <br /> <%= active.name.split[1..-1].join(' ') %></p>
+          <% unless active.eboard.empty? %>
+              <p style="font-family: 'Lato', sans-serif; letter-spacing:0.1em;"><%= active.eboard %></p>
+          <% end %>
+
+        </a>
+    </button>
+
+
+    <div class="md-overlay"></div><!-- the overlay element -->
+</li>
