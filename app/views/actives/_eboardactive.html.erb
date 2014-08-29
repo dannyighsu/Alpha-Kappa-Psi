@@ -139,7 +139,7 @@
           <%= image_tag active.photograph.url(:middlesmall) %>
           <p class="active-names"><%= active.name.split[0] %> <br /> <%= active.name.split[1..-1].join(' ') %></p>
           <% unless active.eboard.empty? %>
-              <p style="font-family: 'Lato', sans-serif; letter-spacing:0.1em;"><%= active.eboard %></p>
+              <p style="font-family: 'Lato', sans-serif; letter-spacing:0.1em; color: black;"><%= active.eboard %></p>
           <% end %>
 
         </a>
