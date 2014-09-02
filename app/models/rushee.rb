@@ -17,7 +17,9 @@ class Rushee < ActiveRecord::Base
 	  :url =>':s3_domain_url',
 	  :path => '/:class/:attachment/:id_partition/:style/:filename',
 	  :s3_credentials => S3_CREDENTIALS
-	
+
+	# Validate attachment type
+	validates_attachment_content_type :photograph, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
 	# Validation for name attribute
 	validates(:name, presence: true, length: { maximum: 50 } )
