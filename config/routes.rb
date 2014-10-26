@@ -36,6 +36,12 @@ AlphaKappaPsi::Application.routes.draw do
   match    '/rushee_mailer',    to: 'static_pages#rushee_mailer',     via: 'get'
   match    '/rushee_mailer',    to: 'static_pages#email_rushee',      via: 'post'
   match    '/eboard',           to: 'actives#eboard',                 via: 'get'
+  match    '/careers',          to: 'static_pages#careers',           via: 'post'
+  match '/careers/2014', to: 'static_pages#careers', via: 'get'
+  match '/careers/2013', to: 'static_pages#careers/2013', via: 'get'
+  match '/careers/2012', to: 'static_pages#careers/2012', via: 'get'
+  match '/careers/2011', to: 'static_pages#careers/2011', via: 'get'
+  match '/careers/2010', to: 'static_pages#careers/2010', via: 'get'
 
   # Handles GET /rush_application -- controller: rush_application | method: INDEX
   # Handles GET /rush_application/:id -- controller: rush_application | method: SHOW

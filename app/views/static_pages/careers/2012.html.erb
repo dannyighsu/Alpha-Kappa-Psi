@@ -1,0 +1,68 @@
+
+<!-- Styling account-wall-static for padding and adding responsitivity to tables -->
+
+<style>
+
+    .table thead tr {
+        background-color: #a9d3cf;
+    }
+
+    .account-wall-static {
+        padding-left: 110px;
+        padding-right: 110px;
+    }
+
+    /* Modifies contrast on striped table */
+    .table-striped tbody > tr:nth-child(odd) > td, .table-striped tbody > tr:nth-child(odd) > th {
+        background-color: #eee;
+    }
+
+    .table {
+        font-size: 11px;
+    }`
+
+
+    @media (max-width: 767px) {
+
+      .account-wall-static {
+          padding-right: 20px;
+          padding-left: 20px;
+      }
+    }
+
+</style>
+
+
+
+<!-- Content -->
+
+<% provide(:title, 'Careers') %>
+
+<div class="account-wall-static">
+
+  <div id="intro">
+
+    <h1>Careers</h1>
+    <h3>Active Brothers + Alumni</h3>
+    <hr />
+    <br />
+
+    <!-- <%= button_to "2014", onclick: (render partial: 'career_entries/entry', locals: {year: 2014}), class: "btn btn-sm btn-default" %> -->
+
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href='/careers/2014'><button type="button" class="btn btn-default navbar-btn">2014</button></a>
+          <a href='/careers/2013'><button type="button" class="btn btn-default navbar-btn">2013</button></a>
+          <a href='/careers/2012'><button type="button" class="btn btn-default navbar-btn">2012</button></a>
+          <a href='/careers/2011'><button type="button" class="btn btn-default navbar-btn">2011</button></a>
+          <a href='/careers/2010'><button type="button" class="btn btn-default navbar-btn">2010</button></a>
+        </div>
+      </div>
+    </nav>
+
+    <%= render partial: 'career_entries/entry', locals: {year: 2012} %>
+
+  </div>
+
+</div>
