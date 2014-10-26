@@ -63,4 +63,9 @@ module ApplicationHelper
     end
   end
 
+  def careerentries
+    CareerEntry.order(:year => :desc, :fullintern => :asc, :job_category => :asc, :name => :asc)
+  end
+
+
 end

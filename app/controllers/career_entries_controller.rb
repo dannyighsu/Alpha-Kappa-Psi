@@ -71,10 +71,4 @@ class CareerEntriesController < ApplicationController
     redirect_to root_url
   end
 
-  def to_careers
-    respond_to do |format|
-      format.js {}
-    end
-  end
-
 end
