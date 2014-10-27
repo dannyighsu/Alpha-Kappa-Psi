@@ -13,14 +13,13 @@ class ApplicationController < ActionController::Base
   # protect_from_forgery with: :exception
 
   # Specifies the path that Devise redirects to after active sign-in
-  def after_sign_in_path_for(resource)
-    if resource == 'active'
-      active_path(@active)
-    elsif resource == 'rushee'
-      rushee_path(@rushee)
-    else
-      root_path
-    end
+
+  def after_sign_in_path_for(active)
+    active_path(@active)
+  end
+
+  def after_sign_in_path_for(rushee)
+    rushee_path(@rushee)
   end
 
   protected
