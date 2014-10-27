@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   end
   helper_method :forem_user
 
+
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
   # Prevent CSRF attacks by raising an exception.
@@ -12,13 +13,14 @@ class ApplicationController < ActionController::Base
   # protect_from_forgery with: :exception
 
   # Specifies the path that Devise redirects to after active sign-in
-
-  def after_sign_in_path_for(active)
-    active_path(@active)
-  end
-
-  def after_sign_in_path_for(rushee)
-    rushee_path(@rushee)
+  def after_sign_in_path_for(resource)
+    if resource == 'active'
+      active_path(@active)
+    elsif resource == 'rushee'
+      rushee_path(@rushee)
+    else
+      root_path
+    end
   end
 
   protected
@@ -30,12 +32,12 @@ class ApplicationController < ActionController::Base
     registration_params = [:name, :email, :major, :authenticity_token, :pledge_class, :biography, :positions_held, :hometown, :linkedin, :photograph, :display_on_index, :eboard, :password, :password_confirmation]
 
     if params[:action] == 'update'
-      devise_parameter_sanitizer.for(:account_update) {
+      devise_parameter_sanitizer.for(:account_update) { 
         |u| u.permit(registration_params << :current_password)
       }
     elsif params[:action] == 'create'
-      devise_parameter_sanitizer.for(:sign_up) {
-        |u| u.permit(registration_params)
+      devise_parameter_sanitizer.for(:sign_up) { 
+        |u| u.permit(registration_params) 
       }
     end
   end
