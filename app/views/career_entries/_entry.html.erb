@@ -1,0 +1,94 @@
+<% @careerentries = careerentries %>
+<% @yearentries = [] %>
+<% for i in 0 ... @careerentries.size %>
+  <% if @careerentries[i].year == year %>
+    <% @yearentries.push(@careerentries[i]) %>
+  <% end %>
+<% end %>
+
+<% i = 0 %>
+</br>
+<div class="table-responsive">
+  <!-- Full-time Entries -->
+  <h3><%= year %> Full-Time</h3></br>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th> Name </th>
+        <th> Company </th>
+        <th> Group </th>
+        <th> Location </th>
+      </tr>
+    </thead>
+
+    <tr style="background-color:#ddd">
+      <td> <b> <%= @yearentries[0].job_category %> </b> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+
+    <% for i in 0 ... @yearentries.size %>
+      <% if @yearentries[i].fullintern == "Full-time" %>
+        <% if i != 0 and @yearentries[i].job_category != @yearentries[i - 1].job_category %>
+          <tr style="background-color:#ddd">
+            <td> <b> <%= @yearentries[i].job_category %> </b> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+          </tr>
+
+        <% end %>
+        <tr>
+          <td> <%= @yearentries[i].name %> </td>
+          <td> <%= @yearentries[i].company %> </td>
+          <td> <%= @yearentries[i].group %> </td>
+          <td> <%= @yearentries[i].location %> </td>
+        </tr>
+      <% else %>
+        <% break %>
+      <% end %>
+    <% end %>
+  </table>
+
+  <% start = i %>
+  <!-- Internship Entries -->
+</br><h3><%= year %> Internships</h3></br>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th> Name </th>
+        <th> Company </th>
+        <th> Group </th>
+        <th> Location </th>
+      </tr>
+    </thead>
+
+    <tr style="background-color:#ddd">
+      <td> <b> <%= @yearentries[start].job_category %> </b> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+
+    <% for i in start ... @yearentries.size %>
+      <% if @yearentries[i].fullintern != "Full-time" %>
+        <% if i != start and @yearentries[i].job_category != @yearentries[i - 1].job_category %>
+          <tr style="background-color:#ddd">
+            <td> <b> <%= @yearentries[i].job_category %> </b> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+          </tr>
+        <% end %>
+
+        <tr>
+          <td> <%= @yearentries[i].name %> </td>
+          <td> <%= @yearentries[i].company %> </td>
+          <td> <%= @yearentries[i].group %> </td>
+          <td> <%= @yearentries[i].location %> </td>
+        </tr>
+      <% end %>
+    <% end %>
+  </table>
+</div>
