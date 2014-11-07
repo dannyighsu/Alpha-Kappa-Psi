@@ -32,10 +32,10 @@
       </div>
       <% if forem_admin? %>
         <div class='btn-group'>
-          <%= link_to t('forem.topic.links.edit'), forem.edit_admin_forum_topic_path(@topic, topic_id: @topic.id), :class => "btn btn-inverse" %>
-          <%= link_to t(".hide.#{@topic.hidden}"), forem.toggle_hide_admin_forum_topic_path(@topic, topic_id: @topic.id), :method => :put, :class => "btn btn-inverse" %>
-          <%= link_to t(".lock.#{@topic.locked}"), forem.toggle_lock_admin_forum_topic_path(@topic, topic_id: @topic.id), :method => :put, :class => "btn btn-inverse" %>
-          <%= link_to t(".pin.#{@topic.pinned}"), forem.toggle_pin_admin_forum_topic_path(@topic, topic_id: @topic.id), :method => :put, :class => "btn btn-inverse" %>
+          <%= link_to t('forem.topic.links.edit'), forem.edit_admin_forum_topic_path(@topic, id: @topic.id, topic_id: @topic.id), :class => "btn btn-inverse" %>
+          <%= link_to t(".hide.#{@topic.hidden}"), forem.toggle_hide_admin_forum_topic_path(@topic, id: @topic.id, topic_id: @topic.id), :method => :put, :class => "btn btn-inverse" %>
+          <%= link_to t(".lock.#{@topic.locked}"), forem.toggle_lock_admin_forum_topic_path(@topic, id: @topic.id, topic_id: @topic.id), :method => :put, :class => "btn btn-inverse" %>
+          <%= link_to t(".pin.#{@topic.pinned}"), forem.toggle_pin_admin_forum_topic_path(@topic, id: @topic.id, topic_id: @topic.id), :method => :put, :class => "btn btn-inverse" %>
         </div>
       <% end %>
     </div>
