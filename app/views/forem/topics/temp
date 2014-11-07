@@ -1,6 +1,4 @@
-<% if @topic.can_be_replied_to? && can?(:reply, @topic) %>
-<%= link_to t(".reply"), forem.new_forum_topic_post_path(@topic), :class => "btn btn-sm" %>
-<% end %>
+
 
 
 
