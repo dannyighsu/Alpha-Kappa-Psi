@@ -20,7 +20,7 @@
           <%= link_to t(".reply"), forem.new_forum_topic_post_path(@topic, topic_id: @topic.id), :class => "btn btn-sm" %>
         <% end %>
         <% if @topic.user == forem_user || forem_admin? %>
-          <%= link_to t(".delete thread"), forem.forum_topic_path(@forum, @topic), :method => :delete, data: { :confirm => t("are_you_sure") }, :class => "btn btn-sm" %>
+          <%= link_to t(".delete thread"), forem.forum_topic_path(@forum, @topic, topic_id: @topic.id), :method => :delete, data: { :confirm => t("are_you_sure") }, :class => "btn btn-sm" %>
         <% end %>
         <% if forem_user %>
           <% if !@topic.subscriber?(forem_user.id) %>
