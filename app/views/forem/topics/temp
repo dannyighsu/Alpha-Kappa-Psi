@@ -1,13 +1,3 @@
-
-
-
-
-<%= link_to t('forem.topic.links.edit'), forem.edit_admin_forum_topic_path(@topic), :class => "btn btn-inverse" %>
-<%= link_to t(".hide.#{@topic.hidden}"), forem.toggle_hide_admin_forum_topic_path(@topic), :method => :put, :class => "btn btn-inverse" %>
-<%= link_to t(".lock.#{@topic.locked}"), forem.toggle_lock_admin_forum_topic_path(@topic), :method => :put, :class => "btn btn-inverse" %>
-<%= link_to t(".pin.#{@topic.pinned}"), forem.toggle_pin_admin_forum_topic_path(@topic), :method => :put, :class => "btn btn-inverse" %>
-
-
 <% if forem_user %>
 <div class='btn-group'>
 <% if can?(:reply, post.topic) %>
