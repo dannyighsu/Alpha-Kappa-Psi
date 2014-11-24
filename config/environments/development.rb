@@ -39,4 +39,7 @@ AlphaKappaPsi::Application.configure do
 
   Paperclip.options[:command_path] = "/usr/local/bin/"
 
+  ENV['EMAIL'] = "rush@calakpsi.com";
+  ENV['PASSWORD'] = "calakpsi1";
+
 end

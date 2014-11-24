@@ -1,0 +1,35 @@
+<% if forem_user %>
+<div class='btn-group'>
+<% if can?(:reply, post.topic) %>
+<% if post.topic.can_be_replied_to? %>
+<%= link_to t('reply', :scope => 'forem.topic'), forem.new_topic_post_path(post.topic, :reply_to_id => post.id), :class => "btn btn-sm" %>
+<%= link_to t('quote', :scope => 'forem.topic'), forem.new_topic_post_path(post.topic, :reply_to_id => post.id, :quote => true), :class => "btn btn-sm" %>
+<% end %>
+<% end %>
+<% if post.owner_or_admin?(forem_user) %>
+<% if can?(:edit_post, post.topic.forum) %>
+<%= link_to t('edit post', :scope => 'forem.post'), forem.edit_topic_post_path(post.topic, post), :class => "btn btn-sm" %>
+<% end %>
+<% if can?(:destroy_post, post.topic.forum) %>
+<%= link_to t('delete', :scope => 'forem.topic'), forem.topic_post_path(post.topic, post), :method => :delete, data: { :confirm => t("are_you_sure") }, :class => "btn btn-sm" %>
+<% end %>
+<% end %>
+</div>
+<% end %>
+
+
+<% if forem_admin? %>
+<div class='btn-group'>
+<%= link_to t('forem.topic.links.edit'), forem.edit_admin_forum_topic_path(@topic, id: @topic.id), :class => "btn btn-inverse" %>
+<%= link_to t(".hide.#{@topic.hidden}"), forem.toggle_hide_admin_forum_topic_path(@topic, id: @topic.id), :method => :put, :class => "btn btn-inverse" %>
+<%= link_to t(".lock.#{@topic.locked}"), forem.toggle_lock_admin_forum_topic_path(@topic, id: @topic.id), :method => :put, :class => "btn btn-inverse" %>
+<%= link_to t(".pin.#{@topic.pinned}"), forem.toggle_pin_admin_forum_topic_path(@topic, id: @topic.id), :method => :put, :class => "btn btn-inverse" %>
+</div>
+<% end %>
+
+<% if @topic.can_be_replied_to? && can?(:reply, @topic) %>
+<%= link_to t(".reply"), forem.new_forum_topic_post_path(@topic, topic_id: @topic.id), :class => "btn btn-sm" %>
+<% end %>
+<% if @topic.user == forem_user || forem_admin? %>
+<%= link_to t(".delete thread"), forem.forum_topic_path(@forum, @topic), :method => :delete, data: { :confirm => t("are_you_sure") }, :class => "btn btn-sm" %>
+<% end %>

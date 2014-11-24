@@ -14,9 +14,9 @@ class ApplicationController < ActionController::Base
 
   # Specifies the path that Devise redirects to after active sign-in
   def after_sign_in_path_for(resource)
-    if resource == 'active'
+    if @active
       active_path(@active)
-    elsif resource == 'rushee'
+    elsif @rushee
       rushee_path(@rushee)
     else
       root_path
@@ -32,12 +32,12 @@ class ApplicationController < ActionController::Base
     registration_params = [:name, :email, :major, :authenticity_token, :pledge_class, :biography, :positions_held, :hometown, :linkedin, :photograph, :display_on_index, :eboard, :password, :password_confirmation]
 
     if params[:action] == 'update'
-      devise_parameter_sanitizer.for(:account_update) { 
+      devise_parameter_sanitizer.for(:account_update) {
         |u| u.permit(registration_params << :current_password)
       }
     elsif params[:action] == 'create'
-      devise_parameter_sanitizer.for(:sign_up) { 
-        |u| u.permit(registration_params) 
+      devise_parameter_sanitizer.for(:sign_up) {
+        |u| u.permit(registration_params)
       }
     end
   end
