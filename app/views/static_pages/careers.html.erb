@@ -70,7 +70,7 @@
     <hr />
     <br />
 
-	<!-- <%= button_to "2014", onclick: (render partial: 'career_entries/entry', locals: {year: 2014}), class: "btn btn-sm btn-default" %> -->
+	<!-- <%= button_to "2014", onclick: (render partial: 'career_entries/fulltime_only_entry', locals: {year: 2014}), class: "btn btn-sm btn-default" %> -->
 
 	<nav class="navbar navbar-default" role="navigation">
 	  <div class="container-fluid">
@@ -85,7 +85,7 @@
 	  </div>
 	</nav>
 
-	<%= render partial: 'career_entries/entry', locals: {year: 2015} %>
+	<%= render partial: 'career_entries/fulltime_only_entry', locals: {year: 2015} %>
 
   </div>
 
