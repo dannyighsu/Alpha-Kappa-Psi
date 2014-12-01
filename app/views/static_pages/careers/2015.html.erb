@@ -1,0 +1,92 @@
+
+<!-- Styling account-wall-static for padding and adding responsitivity to tables -->
+
+<style>
+
+    .table thead tr {
+        background-color: #a9d3cf;
+    }
+
+    .account-wall-static {
+        padding-left: 110px;
+        padding-right: 110px;
+    }
+
+    /* Modifies contrast on striped table */
+    .table-striped tbody > tr:nth-child(odd) > td, .table-striped tbody > tr:nth-child(odd) > th {
+        background-color: #eee;
+    }
+
+    .table {
+        font-size: 11px;
+    }`
+
+
+    @media (max-width: 767px) {
+
+      .account-wall-static {
+          padding-right: 20px;
+          padding-left: 20px;
+      }
+    }
+
+    .navbar {
+      box-shadow: none;
+    }
+
+    .navbar-header a {
+      padding-left: 20px;
+      padding-right: 20px;
+      color: black;
+      font-size: 20px;
+      font-family: 'Lato', sans-serif;
+      border-right-style: solid;
+      border-left-style: solid;
+      border-width: thin;
+    }
+
+    #left-edge {
+      border-left: none;
+    }
+
+    #right-edge {
+      border-right: none;
+    }
+
+</style>
+
+
+
+<!-- Content -->
+
+<% provide(:title, 'Careers') %>
+
+<div class="account-wall-static">
+
+  <div id="intro">
+
+    <h1>Careers</h1>
+    <h3>Active Brothers + Alumni</h3>
+    <hr />
+    <br />
+
+    <!-- <%= button_to "2015", onclick: (render partial: 'career_entries/entry', locals: {year: 2015}), class: "btn btn-sm btn-default" %> -->
+
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href='/careers/2015' id='left-edge'>2015</a>
+          <a href='/careers/2014'>2014</a>
+          <a href='/careers/2013'>2013</a>
+          <a href='/careers/2012'>2012</a>
+          <a href='/careers/2011'>2011</a>
+          <a href='/careers/2010' id='right-edge'>2010</a>
+        </div>
+      </div>
+    </nav>
+
+    <%= render partial: 'career_entries/entry', locals: {year: 2015} %>
+
+  </div>
+
+</div>
