@@ -70,12 +70,13 @@
     <hr />
     <br />
 
-	<!-- <%= button_to "2014", onclick: (render partial: 'career_entries/entry', locals: {year: 2014}), class: "btn btn-sm btn-default" %> -->
+	<!-- <%= button_to "2015", onclick: (render partial: 'career_entries/entry', locals: {year: 2015}), class: "btn btn-sm btn-default" %> -->
 
 	<nav class="navbar navbar-default" role="navigation">
 	  <div class="container-fluid">
 		<div class="navbar-header">
-		  <a href='/careers/2014' id='left-edge'>2014</a>
+		  <a href='/careers/2015' id='left-edge'>2014</a>
+		  <a href='/careers/2014'>2014</a>
 		  <a href='/careers/2013'>2013</a>
 		  <a href='/careers/2012'>2012</a>
 		  <a href='/careers/2011'>2011</a>
@@ -84,7 +85,7 @@
 	  </div>
 	</nav>
 
-	<%= render partial: 'career_entries/fulltime_only_entry', locals: {year: 2014} %>
+	<%= render partial: 'career_entries/fulltime_only_entry', locals: {year: 2015} %>
 
   </div>
 
