@@ -14,10 +14,10 @@ class ApplicationController < ActionController::Base
 
   # Specifies the path that Devise redirects to after active sign-in
   def after_sign_in_path_for(resource)
-    if @active
-      active_path(@active)
-    elsif @rushee
-      rushee_path(@rushee)
+    if resource.is_a?(Active)
+      active_path(resource)
+    elsif resource.is_a?(Rushee)
+      rushee_path(resource)
     else
       root_path
     end

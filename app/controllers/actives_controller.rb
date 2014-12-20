@@ -1,4 +1,4 @@
-class ActivesController < ApplicationController
+def sclass ActivesController < ApplicationController
 
 	skip_before_filter :verify_authenticity_token
 
